@@ -141,7 +141,7 @@ export function Hero() {
 
           <h1
             ref={titleRef}
-            className="text-center mb-0 tracking-tight leading-[0.9] lg:text-8xl text-sm font-light text-cyan-400"
+            className="text-center mb-0 tracking-tight leading-[0.9] lg:text-8xl text-cyan-400 text-base font-normal"
           >Вернем ковролину первозданный вид: безупречная чистота и свежесть с гарантией результата</h1>
         </div>
       </div>
