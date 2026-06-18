@@ -4,35 +4,35 @@ import { ArrowUpRight } from "lucide-react"
 const projects = [
   {
     id: 1,
-    title: "Резиденция Светлая",
-    category: "Жилой дом",
-    location: "Москва, Россия",
-    year: "2024",
-    image: "/images/hously-1.png",
+    title: "Ковролин в квартире",
+    category: "Глубокая химчистка",
+    location: "Результат до/после",
+    year: "",
+    image: "https://cdn.poehali.dev/projects/4baf3de1-dd67-4c5a-92bd-46b2ee1428d9/files/100f92bd-c84b-4eac-a915-007ee238f759.jpg",
   },
   {
     id: 2,
-    title: "Павильон Стекло",
-    category: "Коммерческий объект",
-    location: "Санкт-Петербург, Россия",
-    year: "2023",
-    image: "/images/hously-2.png",
+    title: "Чистка экстрактором",
+    category: "Оборудование Santoema",
+    location: "В процессе работы",
+    year: "",
+    image: "https://cdn.poehali.dev/projects/4baf3de1-dd67-4c5a-92bd-46b2ee1428d9/files/81f842cb-7f73-46b9-8bf8-f3dbab9ceb64.jpg",
   },
   {
     id: 3,
-    title: "Дом у моря",
-    category: "Жилой дом",
-    location: "Сочи, Россия",
-    year: "2023",
-    image: "/images/hously-3.png",
+    title: "Свежесть покрытия",
+    category: "После химчистки",
+    location: "Результат работы",
+    year: "",
+    image: "https://cdn.poehali.dev/projects/4baf3de1-dd67-4c5a-92bd-46b2ee1428d9/files/a0a07440-4ee2-4d01-8d1f-761a7447f728.jpg",
   },
   {
     id: 4,
-    title: "Северный приют",
-    category: "Гостиничный комплекс",
-    location: "Казань, Россия",
-    year: "2024",
-    image: "/images/hously-4.png",
+    title: "Роторная машина",
+    category: "Профессиональная техника",
+    location: "Оборудование из Италии",
+    year: "",
+    image: "https://cdn.poehali.dev/projects/4baf3de1-dd67-4c5a-92bd-46b2ee1428d9/files/0a111c87-4a0e-489c-9218-382ae6d2f7f1.jpg",
   },
 ]
 
@@ -68,14 +68,14 @@ export function Projects() {
       <div className="container mx-auto px-6 md:px-12">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
           <div>
-            <p className="text-muted-foreground text-sm tracking-[0.3em] uppercase mb-6">Избранные работы</p>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight">Наши проекты</h2>
+            <p className="text-muted-foreground text-sm tracking-[0.3em] uppercase mb-6">Фото до и после</p>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight">Наши работы</h2>
           </div>
           <a
-            href="#"
+            href="#contact"
             className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors group"
           >
-            Смотреть все проекты
+            Заказать чистку
             <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
           </a>
         </div>
@@ -112,7 +112,7 @@ export function Projects() {
                     {project.category} · {project.location}
                   </p>
                 </div>
-                <span className="text-muted-foreground/60 text-sm">{project.year}</span>
+                <ArrowUpRight className="w-5 h-5 text-muted-foreground/60 flex-shrink-0" />
               </div>
             </article>
           ))}

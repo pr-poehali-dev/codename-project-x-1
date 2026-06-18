@@ -1,30 +1,31 @@
 import { useEffect, useRef, useState } from "react"
-import { Home, Building, Armchair, Trees } from "lucide-react"
+import { Sparkles, Home, Building2, Stars } from "lucide-react"
 import { HighlightedText } from "./HighlightedText"
 
 const expertiseAreas = [
   {
-    title: "Жилая архитектура",
-    description: "Создаем дома, которые сочетают красоту с комфортом, где каждое пространство служит и форме, и функции.",
+    title: "Химчистка ковролина в квартире",
+    description: "Глубокая очистка ковролина экстрактором Santoema. Удаляем пятна, пыль и запахи, возвращаем покрытию свежий вид.",
+    price: "от 150 ₽/м²",
     icon: Home,
   },
   {
-    title: "Коммерческие объекты",
-    description:
-      "Проектируем рабочие пространства, которые вдохновляют на продуктивность и отражают ценности передовых организаций.",
-    icon: Building,
+    title: "Чистка ковровых покрытий в офисе",
+    description: "Профессиональная химчистка больших площадей. Работаем в удобное время, не мешая рабочему процессу.",
+    price: "от 120 ₽/м²",
+    icon: Building2,
   },
   {
-    title: "Дизайн интерьеров",
-    description:
-      "Создаем интерьеры, которые гармонируют с архитектурной оболочкой, формируя целостный пространственный опыт.",
-    icon: Armchair,
+    title: "Выведение сложных пятен",
+    description: "Удаляем застарелые загрязнения, следы от напитков, грязи и животных безопасной гипоаллергенной химией.",
+    price: "от 200 ₽/м²",
+    icon: Sparkles,
   },
   {
-    title: "Градостроительство",
-    description:
-      "Формируем сообщества через продуманную интеграцию общественных пространств, зданий и природных элементов.",
-    icon: Trees,
+    title: "Антибактериальная обработка",
+    description: "Дезинфекция и устранение запахов. Гипоаллергенные средства безопасны для детей и домашних животных.",
+    price: "от 100 ₽/м²",
+    icon: Stars,
   },
 ]
 
@@ -57,14 +58,14 @@ export function Expertise() {
     <section id="services" ref={sectionRef} className="py-32 md:py-29">
       <div className="container mx-auto px-6 md:px-12">
         <div className="max-w-3xl mb-20">
-          <p className="text-muted-foreground text-sm tracking-[0.3em] uppercase mb-6">Наши услуги</p>
+          <p className="text-muted-foreground text-sm tracking-[0.3em] uppercase mb-6">Услуги и цены</p>
           <h2 className="text-6xl font-medium leading-[1.15] tracking-tight mb-6 text-balance lg:text-8xl">
-            <HighlightedText>Экспертиза</HighlightedText>, отточенная
+            <HighlightedText>Чистка</HighlightedText> любой
             <br />
-            практикой
+            сложности
           </h2>
           <p className="text-muted-foreground text-lg leading-relaxed">
-            Каждый проект опирается на десятилетия совокупного опыта, создавая архитектуру, которая одновременно инновационна и вневременна.
+            Профессиональная химчистка ковролина и ковровых покрытий. Цены ориентировочные — точную стоимость рассчитаем после осмотра.
           </p>
         </div>
 
@@ -93,7 +94,10 @@ export function Expertise() {
                 >
                   <Icon className="w-10 h-10 mb-4 text-foreground" strokeWidth={1.25} />
                 </div>
-                <h3 className="text-xl font-medium mb-4">{area.title}</h3>
+                <div className="flex items-center justify-between gap-4 mb-4">
+                  <h3 className="text-xl font-medium">{area.title}</h3>
+                  <span className="text-orange-500 font-medium whitespace-nowrap">{area.price}</span>
+                </div>
                 <p className="text-muted-foreground leading-relaxed">{area.description}</p>
               </div>
             )
