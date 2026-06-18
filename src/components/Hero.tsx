@@ -142,11 +142,7 @@ export function Hero() {
           <h1
             ref={titleRef}
             className="text-7xl font-medium text-center mb-0 tracking-tight leading-[0.9] lg:text-8xl text-stone-50"
-          >
-            {"Химчистка ковролина"}
-            <br />
-            <span className="text-orange-200">{"как новый"}</span>
-          </h1>
+          >Вернем ковролину первозданный вид: безупречная чистота и свежесть с гарантией результата</h1>
         </div>
       </div>
 
